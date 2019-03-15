@@ -15,8 +15,8 @@
     }
   },
   "icons": {
-    "56": "/icons/app_56.png",
-    "112": "/icons/app_112.png"
+    "56": "/style/icons/app_56.png",
+    "112": "/style/icons/app_112.png"
   },
   "chrome": {
     "statusbar": "overlap"
