@@ -1,0 +1,88 @@
+.panel {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: var(--softkeybar-height);
+  padding-bottom: 53.75%;  // 129 / 240, (height of img_control) / (height);
+  background-image: url('images/control.png');
+
+  > button {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@each $button in plus, minus, times, divide, switch, dot, equals {
+  .#{$button} {
+    background-image: url('images/#{$button}_press.png');
+  }
+}
+
+.plus, .minus, .times, .divide {
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  opacity: 0;
+}
+
+.equals, .dot, .switch {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0;
+}
+
+.equals {
+  top: 5.4rem;
+  left: 11rem;
+}
+
+.dot {
+  top: 8.5rem;
+  left: 2.5rem;
+}
+
+.switch {
+  top: 8.5rem;
+  right: 2.5rem;
+}
+
+.plus {
+  top: 9.7rem;
+  left: 11.4rem;
+}
+
+.minus {
+  top: 1.9rem;
+  left: 11.4rem;
+}
+
+.times {
+  top: 5.8rem;
+  left: 15.3rem;
+}
+
+.divide {
+  top: 5.8rem;
+  right: 15.3rem;
+}
+
+.active {
+  animation: key-press 1000ms;
+}
+
+@keyframes key-press {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

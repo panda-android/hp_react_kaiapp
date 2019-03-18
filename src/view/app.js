@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './app.scss';
+import 'l10n';
+import { SoftKey } from 'kaid';
+import Panel from '../panel';
 
 class App extends Component {
   componentDidMount() {
@@ -8,23 +11,16 @@ class App extends Component {
     this.anchor && this.anchor.focus();
   }
 
+  handleUserInput = (key) => {
+    // alert("key = "+key);
+    this.setState(prevState => (reducer(prevState, key)));
+  };
+        // <Panel onUserInput={this.handleUserInput} />
+
   render() {
     return (
       <>
-        <header className="app-header">
-          <p>Edit "view/app.js" and save to reload.</p>
-          <a
-            className="app-link"
-            href="https://developer.kaiostech.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ref={node => {
-              this.anchor = node;
-            }}
-          >
-            Learn KaiOS
-          </a>
-        </header>
+        <SoftKey left="clear" right="clear-all" />
       </>
     );
   }

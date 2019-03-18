@@ -3,13 +3,22 @@
   "description": "react_project",
   "launch_path": "/index.html",
   "type": "certified",
+  "cursor": true,
   "permissions": {
     "themeable": {}
   },
   "default_locale": "en-US",
-  "theme_color": "#fbba32",
+  "theme_color": "#a065e6",
   "locales": {
     "en-US": {
+      "name": "React Project",
+      "description": "React Project"
+    },
+    "es-US": {
+      "name": "React Project",
+      "description": "React Project"
+    },
+    "fr": {
       "name": "React Project",
       "description": "React Project"
     }

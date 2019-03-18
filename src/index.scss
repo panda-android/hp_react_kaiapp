@@ -1,17 +1,13 @@
 html {
   font-size: 10px;
+  font-family: 'Open Sans';
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  padding: 0;
+body {
   margin: 0;
+  padding: 0;
 }
 
-#app {
-  position: fixed;
-  top: var(--statusbar-height);
-  width: 100%;
-  height: calc(100% - var(--statusbar-height));
+div {
+  text-align: center;
 }
